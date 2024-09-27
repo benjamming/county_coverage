@@ -160,3 +160,17 @@ cython_debug/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
+data/raw/centerlines/LOJIC-scraping.kml
+data/raw/rides/02_03_24.kml
+data/raw/rides/02_04_24.kml
+data/raw/rides/02_10_24.kml
+data/raw/rides/02_26_24.kml
+data/raw/rides/03_11_24.kml
+data/raw/rides/03_12_24.kml
+data/raw/rides/03_14_24.kml
+data/raw/rides/03_16_24.kml
+data/raw/rides/Errands.kml
+data/raw/rides/False_Spring_2.kml
+data/raw/rides/False_Spring.kml
+data/raw/rides/February_1st_ride.kml
+data/raw/rides/Too_many_flats_too_windy.kml
