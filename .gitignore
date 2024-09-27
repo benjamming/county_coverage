@@ -174,3 +174,5 @@ data/raw/rides/False_Spring_2.kml
 data/raw/rides/False_Spring.kml
 data/raw/rides/February_1st_ride.kml
 data/raw/rides/Too_many_flats_too_windy.kml
+data/centerlines_raw.csv
+data/working_centerlines.csv
