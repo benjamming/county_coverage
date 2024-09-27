@@ -174,5 +174,6 @@ data/raw/rides/False_Spring_2.kml
 data/raw/rides/False_Spring.kml
 data/raw/rides/February_1st_ride.kml
 data/raw/rides/Too_many_flats_too_windy.kml
-data/centerlines_raw.csv
-data/working_centerlines.csv
+data/cleaner/centerlines_raw.csv
+data/cleaner/working_centerlines.csv
+data/raw/Louisville_Metro_KY_County_Boundaries.geojson
