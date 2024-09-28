@@ -177,3 +177,5 @@ data/raw/rides/Too_many_flats_too_windy.kml
 data/cleaner/centerlines_raw.csv
 data/cleaner/working_centerlines.csv
 data/raw/Louisville_Metro_KY_County_Boundaries.geojson
+data/cleaner/centerline_coordinates.csv
+data/cleaner/centerline_data.csv
