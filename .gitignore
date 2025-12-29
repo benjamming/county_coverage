@@ -179,3 +179,14 @@ data/cleaner/working_centerlines.csv
 data/raw/Louisville_Metro_KY_County_Boundaries.geojson
 data/cleaner/centerline_coordinates.csv
 data/cleaner/centerline_data.csv
+data/cleaner/centerlines_data.json
+data/cleaner/intersections_data.json
+data/raw/centerlines_column_metadata.txt
+data/raw/LOJIC_centerlines_metadata.html
+data/raw/centerlines/centerlines.info
+data/raw/centerlines/Jefferson_County_KY_Street_Centerlines_2023.csv
+data/raw/centerlines/Jefferson_County_KY_Street_Centerlines_2025.csv
+data/raw/centerlines/Jefferson_County_KY_Street_Centerlines.geojson
+data/raw/intersections/intersections.info
+data/raw/intersections/Jefferson_County_KY_Street_Intersections.csv
+data/raw/intersections/Jefferson_County_KY_Street_Intersections.geojson
