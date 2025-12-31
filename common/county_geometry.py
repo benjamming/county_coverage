@@ -67,7 +67,7 @@ The implied radius is the circumference divided by 2 pi:
 
 R = 6367 km = 3956 mi
 """
-
+# More constants: Bounding box for Jefferson county
 west_longitude = -85.94712712079293
 east_longitude = -85.3443621648922
 south_latitude = 37.99712528351634 
