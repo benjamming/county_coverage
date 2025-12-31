@@ -25,8 +25,10 @@ from numpy import radians, sin, cos, arcsin, sqrt
 earth_radius_km = 6367
 earth_radius_mi = 3956
 
-km_to_miles = 0.6213712
 mi_to_ft = 5280
+earth_radius_ft = earth_radius_mi * mi_to_ft
+
+km_to_miles = 0.6213712
 km_to_ft = km_to_miles * mi_to_ft
 
 # Notes on thest values: The following comes under the heading 
@@ -55,39 +57,16 @@ delta_longitude = east_longitude - west_longitude
 delta_latitude = north_latitude - south_latitude
 
 def scale_point(point):
-    long, lat = point
-    long = (long - west_longitude)/delta_longitude
+    lon, lat = point
+    lon = (lon - west_longitude)/delta_longitude
     lat = (lat - south_latitude)/delta_latitude
-    return long, lat 
+    return lon, lat 
 
-def haversine_km(point1, point2):
+
+def central_angle(point1, point2):
     """
-    Calculate the great circle distance between two points
-    on the earth (specified in decimal degrees)
-    Returns value in kilometers.
-    
-    All args must be of equal length.    
-
-    """
-    lon1, lat1 = map(radians, point1)
-    lon2, lat2 = map(radians, point2)
-    
-    dlon = lon2 - lon1
-    dlat = lat2 - lat1
-    
-    havTheta = sin(dlat/2.0)**2 + cos(lat1) * cos(lat2) * sin(dlon/2.0)**2
-    
-    theta = 2 * arcsin(sqrt(havTheta))
-    return earth_radius_km * theta
-
-
-def haversine_mi(point1, point2):
-    """
-    Calculate the great circle distance between two points
-    on the earth (specified in decimal degrees)
-    Returns value in miles
-    
-    All args must be of equal length.    
+    Calculate the central angle between two points on the earth 
+    (specified in decimal degrees)
     
     """
     lon1, lat1 = map(radians, point1)
@@ -97,6 +76,27 @@ def haversine_mi(point1, point2):
     dlat = lat2 - lat1
     
     havTheta = sin(dlat/2.0)**2 + cos(lat1) * cos(lat2) * sin(dlon/2.0)**2
-    
-    theta = 2 * arcsin(sqrt(havTheta))
-    return earth_radius_mi * theta
+    return 2 * arcsin(sqrt(havTheta))
+
+
+def haversine_distance_mi(point1, point2):
+    """
+    Caculate distance between two points on the earth using the
+    haversine formula. Returns distance in miles.
+    """
+    return central_angle(point1, point2) * earth_radius_mi
+
+def haversine_distance_ft(point1, point2):
+    """
+    Caculate distance between two points on the earth using the
+    haversine formula. Returns distance in feet.
+    """
+    return central_angle(point1, point2) * earth_radius_ft
+
+def haversine_distance_km(point1, point2):
+    """
+    Caculate distance between two points on the earth using the
+    haversine formula. Returns distance in kilometers.
+    """
+    return central_angle(point1, point2) * earth_radius_km
+
