@@ -1,11 +1,11 @@
 """Bounding box for all data.
 
-|       boundary |              value | 
-|----------------|--------------------|
-| West longitude | -85.94712712079293 |
-| East longitide | -85.3443621648922  |
-| South_latitude | 37.99712528351634  |
-| North_latitude | 38.38023822809115  |
+|       boundary |              value |               |
+|----------------|--------------------|---------------|
+| West longitude | -85.94712712079293 | min longitude |
+| East longitide | -85.3443621648922  | max longitude |
+| South_latitude | 37.99712528351634  | min latitude  |
+| North_latitude | 38.38023822809115  | max latitude  |
 
 Span for each dimension. 
 Distance was estimated with the distance tool on Google Maps. Not precise!
