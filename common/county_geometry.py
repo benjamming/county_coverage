@@ -20,17 +20,7 @@ Spans for each dimension.
 Approximate distance was gathered using Google Maps "measure distance" tool.
 Pretty close for eyeballing it. 
 
-Haversine estimate calculation for longitude:
-
-haversine_distance_mi(
-        (west_longitude, north_latitude), (east_longitude, north_latitude) )
-
-... and for latitude:
-
-haversine_distance_mi(
-        (west_longitude, south_latitude), (west_longitude, north_latitude) )
-
-* Code for finding the boundaries can be found in
+* Code for finding/calculating these various figures can be found in
     new/00_data_discovery/county_boundaries.ipynb
 """
 
