@@ -67,6 +67,7 @@ The implied radius is the circumference divided by 2 pi:
 
 R = 6367 km = 3956 mi
 """
+
 # More constants: Bounding box for Jefferson county
 west_longitude = -85.94712712079293
 east_longitude = -85.3443621648922
@@ -76,6 +77,7 @@ north_latitude = 38.38023822809115
 delta_longitude = east_longitude - west_longitude
 delta_latitude = north_latitude - south_latitude
 
+# 
 def scale_point(point):
     """Scale longitude, latitude to a value between 0.0 and 1.0 inclusive,
     where 0.0 represents the minimum boundary and 1.0 represents the maximum
@@ -86,7 +88,7 @@ def scale_point(point):
     lat -= south_latitude # min latitude
     return lon/delta_longitude, lat/delta_latitude
 
-
+# haversine functions
 def central_angle(point1, point2):
     """
     Calculate the central angle between two points on the earth 
