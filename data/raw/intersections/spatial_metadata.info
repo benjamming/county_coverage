@@ -1,0 +1,82 @@
+Extents  ►
+Extent 
+Geographic extent 
+Bounding rectangle 
+Extent type  Extent used for searching
+* West longitude -85.945347
+* East longitude -85.344499
+* North latitude 38.378034
+* South latitude 38.005894
+* Extent contains the resource Yes
+
+Extent in the item's coordinate system 
+* West longitude 1154395.500000
+* East longitude 1325086.990000
+* South latitude 188677.437500
+* North latitude 321629.781250
+* Extent contains the resource Yes
+
+Hide Extents ▲
+Spatial Reference  ►
+ArcGIS coordinate system 
+* Type Projected
+* Geographic coordinate reference GCS_North_American_1983
+* Projection NAD_1983_StatePlane_Kentucky_North_FIPS_1601_Feet
+* Coordinate reference details 
+Projected coordinate system 
+Well-known identifier 102679
+X origin -120428400
+Y origin -95345400
+XY scale 800
+Z origin 0
+Z scale 1
+M origin 0
+M scale 1
+XY tolerance 0.0025000000000000001
+Z tolerance 2
+M tolerance 2
+High precision true
+LatestWKID  2246
+Well-known text PROJCS["NAD_1983_StatePlane_Kentucky_North_FIPS_1601_Feet",GEOGCS["GCS_North_American_1983",DATUM["D_North_American_1983",SPHEROID["GRS_1980",6378137.0,298.257222101]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Lambert_Conformal_Conic"],PARAMETER["False_Easting",1640416.666666667],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",-84.25],PARAMETER["Standard_Parallel_1",37.96666666666667],PARAMETER["Standard_Parallel_2",38.96666666666667],PARAMETER["Latitude_Of_Origin",37.5],UNIT["Foot_US",0.3048006096012192],AUTHORITY["EPSG",2246]]
+
+Reference system identifier 
+*  Value 2246
+* Codespace EPSG
+* Version 8.2.6
+
+
+Hide Spatial Reference ▲
+Spatial Data Properties  ►
+Vector  ►
+* Level of topology for this dataset  full planar graph
+
+
+Geometric objects 
+Feature class name ADDRESS.Intersection
+* Object type  point
+* Object count 20455
+
+Hide Vector ▲
+
+
+ArcGIS Feature Class Properties 
+►
+Feature class name ADDRESS.Intersection
+* Feature type Simple
+* Geometry type Point
+* Has topology TRUE
+* Feature count 20455
+* Spatial index TRUE
+* Linear referencing FALSE
+
+
+* XY rank 1
+* Z rank 1
+* Topology weight 5.000000
+* Events on validation FALSE
+Participates in topology rules  4
+
+Hide ArcGIS Feature Class Properties ▲
+
+
+Hide Spatial Data Properties ▲
