@@ -25,10 +25,16 @@ Pretty close for eyeballing it.
 """
 
 from numpy import radians, sin, cos, arcsin, sqrt
+from numpy.linalg import norm
 
 # Some constants
 earth_radius_km = 6367
 earth_radius_mi = 3956
+
+# value for km calculated from:
+# https://planetcalc.com/7721/
+earth_radius_km_2 = 6370.074
+
 
 mi_to_ft = 5280
 earth_radius_ft = earth_radius_mi * mi_to_ft
@@ -78,6 +84,23 @@ def scale_point(point):
     lat -= south_latitude # min latitude
     return lon/delta_longitude, lat/delta_latitude
 
+def scale_longitude(longitude):
+    return (longitude - west_longitude)/delta_longitude
+
+def scale_latitude(latitude):
+    return (latitude - south_latitude)/delta_latitude
+
+
+# euclidean functions
+def euc_distance_mi(point1, point2):
+    lon1, lat1 = point1
+    lon2, lat2 = point2
+
+    dlon = ((lon1 - lon2)/delta_longitude) * 32.68 # mile distance
+    dlat = ((lat1 - lat2)/delta_longitude) * 26.50
+
+    return sqrt(dlon**2 + dlat**2)
+
 # haversine functions
 def central_angle(point1, point2):
     """
@@ -113,3 +136,15 @@ def haversine_distance_km(point1, point2):
     """
     return central_angle(point1, point2) * earth_radius_km
 
+
+# These have really come in handy
+# Determined by haversine method
+
+#longitude_span_mi = 32.68 # distance in miles #
+#latitide_span_mi = 26.50 
+
+longitude_span_mi = haversine_distance_mi(
+    (west_longitude, north_latitude), (east_longitude, north_latitude))
+
+latitude_span_mi = haversine_distance_mi(
+    (west_longitude, south_latitude), (west_longitude, north_latitude))
