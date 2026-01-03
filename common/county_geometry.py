@@ -27,6 +27,24 @@ Pretty close for eyeballing it.
 from numpy import radians, sin, cos, arcsin, sqrt
 from numpy.linalg import norm
 
+from pyproj import CRS
+from pyproj.transformer import Transformer 
+
+# convert coordinates from LOJIC CRS to (longitude, latitude)
+# LOJIC projection: ESRI:102679
+# NAD_1983_StatePlane_Kentucky_North_FIPS_1601_Feet
+
+# Standard long, lat: epsg:4326
+KY_grid_north_CRS = CRS("ESRI:102679")
+standard_CRS = CRS("epsg:4326")
+
+LL_to_KY_grid = Transformer.from_crs(
+    crs_from=standard_CRS, crs_to=KY_grid_north_CRS, always_xy=True).transform
+
+KY_grid_to_LL = Transformer.from_crs(
+    crs_from=KY_grid_north_CRS, crs_to=standard_CRS, always_xy=True).transform
+
+
 # Some constants
 earth_radius_km = 6367
 earth_radius_mi = 3956
