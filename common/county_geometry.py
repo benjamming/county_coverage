@@ -166,3 +166,22 @@ longitude_span_mi = haversine_distance_mi(
 
 latitude_span_mi = haversine_distance_mi(
     (west_longitude, south_latitude), (west_longitude, north_latitude))
+
+class converter:
+    def __init__(self):
+        self.KY_grid_CRS = KYCRS = CRS("ESRI:102679")
+        self.long_lat_CRS = LLCRS =CRS("epsg:4326")
+
+        to_grid = Transformer.from_crs(crs_from=LLCRS, crs_to=KYCRS, always_xy=True)
+        to_ll = Transformer.from_crs(crs_from=KYCRS, crs_to=LLCRS, always_xy=True)
+
+        self.to_grid = self.from_ll = to_grid.transform
+        self.to_ll = self.from_grid = to_ll.transform
+
+    def point_to_ll(self, point):
+        return self.to_ll(*point)
+    
+    def point_to_grid(self, point):
+        return self.to_grid(*point)
+
+convert_points = converter()
