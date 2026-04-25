@@ -186,3 +186,5 @@ data/raw/centerlines/Jefferson_County_KY_Street_Centerlines.geojson
 data/raw/intersections/intersections.info
 data/raw/intersections/Jefferson_County_KY_Street_Intersections.csv
 data/raw/intersections/Jefferson_County_KY_Street_Intersections.geojson
+data/cleaner/geo_links.csv
+data/cleaner/geo_links.json
